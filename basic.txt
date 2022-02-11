@@ -1,0 +1,56 @@
+1. create-react-app
+2. app.js - импорт высокоуровневых тегов-компонентов <Header/>
+3. Папка components:
+Header.jxs, Header.module.css - export default
+4.Компонент - это функция, которая возвращает разметку (jsx)
+В каждый компонент передается props.
+Пример:
+    <div>
+        <Post message="Hola" like="20" />
+    </div>
+
+const Post = (props) => {
+  return (
+    <div>
+        {props.message}
+        {props.like}
+    </div>
+  );
+};
+5.Системма роутинга - системма маршрутов
+npm install react-router-dom --save
+--save - добавляет запись в packet.json
+<a> в React назыв. NavLink, переключение по 
+вкаладкам без перезагрузки страницы
+Пример:
+   <div className={s.item}>
+        <NavLink to="/profile">Profile</NavLink>
+    </div>
+
+  <BrowserRouter>
+    <Routes>
+        <Route path="/dialogs" element= {<Dialogs/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+    </Routes>
+  </BrowserRouter>
+
+
+======================================
+
+Grid
+.app-wrapper{
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-areas: 
+  "header header"
+  "nav content";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr; // соотношение фракций
+  grid-gap: 10px; // пробел в сетке
+}
+
+.app-wrapper-content{
+    grid-area: content; //псевдоним, в каждом классе
+}
