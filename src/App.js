@@ -12,6 +12,8 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile'
 import Settings from './components/Settings/Settings';
+import Friends from './components/Friends/Friends';
+
 
 
 
@@ -21,10 +23,11 @@ const App = (props) => {
     <div className='app-wrapper'> 
       <Header/>
       <Navbar/>
+      <Friends state={props.state.sidebar} />
       <div className='app-wrapper-content'>
       <Routes>
-          <Route path="profile" element={<Profile posts={props.posts} />} />
-          <Route path="dialogs/*" element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
+          <Route path="profile" element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
+          <Route path="dialogs/*" element={<Dialogs state={props.state.dialogsPage} />} />
           <Route path="/news" element= {<News/>}/>
           <Route path="/music" element={<Music/>}/>
           <Route path="/settings" element={<Settings/>}/>

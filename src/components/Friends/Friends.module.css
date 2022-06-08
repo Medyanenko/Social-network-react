@@ -1,0 +1,13 @@
+.friends{
+
+}
+.friendsBlock{
+ display: flex;
+ justify-content: space-between;
+ text-align: center;
+}
+.friendsBlock img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}

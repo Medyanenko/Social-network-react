@@ -1,8 +1,8 @@
 import React from "react";
 import {NavLink} from "react-router-dom"
 import s from './Navbar.module.css';
-
-const Navbar = () => {
+import Friends from "../Friends/Friends";
+const Navbar = (props) => {
   return (
     <nav className={s.nav}>
       <div>
