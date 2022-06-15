@@ -12,7 +12,7 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile'
 import Settings from './components/Settings/Settings';
-import Friends from './components/Friends/Friends';
+import FriendsContainer from './components/Friends/FriendsContainer';
 
 
 
@@ -23,7 +23,7 @@ const App = (props) => {
     <div className='app-wrapper'> 
       <Header/>
       <Navbar/>
-      <Friends state={props.state.sidebar} />
+      <FriendsContainer store = {props.store} />
       <div className='app-wrapper-content'>
       <Routes>
           <Route path="profile" element={<Profile store = {props.store}/>} />
