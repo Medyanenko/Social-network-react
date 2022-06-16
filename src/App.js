@@ -13,6 +13,7 @@ import News from './components/News/News';
 import Profile from './components/Profile/Profile'
 import Settings from './components/Settings/Settings';
 import FriendsContainer from './components/Friends/FriendsContainer';
+import UsersContainer from './components/Users/UsersContainer';
 
 
 
@@ -28,6 +29,7 @@ const App = (props) => {
       <Routes>
           <Route path="profile" element={<Profile store = {props.store}/>} />
           <Route path="dialogs/*" element={<DialogsContainer store = {props.store}/>} />
+          <Route path="users/"  element={<UsersContainer/>}/>
           <Route path="/news" element= {<News/>}/>
           <Route path="/music" element={<Music/>}/>
           <Route path="/settings" element={<Settings/>}/>
