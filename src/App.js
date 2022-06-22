@@ -10,10 +10,10 @@ import Header from './components/Header/Header';
 import Music from './components/Music/Music';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
-import Profile from './components/Profile/Profile'
 import Settings from './components/Settings/Settings';
 import FriendsContainer from './components/Friends/FriendsContainer';
 import UsersContainer from './components/Users/UsersContainer';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 
 
@@ -27,7 +27,8 @@ const App = (props) => {
       <FriendsContainer store = {props.store} />
       <div className='app-wrapper-content'>
       <Routes>
-          <Route path="profile" element={<Profile store = {props.store}/>} />
+          <Route path='/profile/:userId' element={<ProfileContainer store = {props.store}/>} />
+          <Route path="profile/*" element={<ProfileContainer store = {props.store}/>} />
           <Route path="dialogs/*" element={<DialogsContainer store = {props.store}/>} />
           <Route path="users/"  element={<UsersContainer/>}/>
           <Route path="/news" element= {<News/>}/>
