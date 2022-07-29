@@ -11,16 +11,7 @@ const istance = axios.create({
 export const usersAPI = {
     getUsers(currentPage, pageSize){
         return istance.get(`users?page=${currentPage}&count=${pageSize}`).then(response => response.data);
-       }
-    }
-
-export const authAPI = {
-    getAuth(){
-        return istance.get(`auth/me`).then(response => response.data);
-    }
-}
-
-export const followedAPI = {
+       },
     unfollow(id){
         return istance.delete(`follow/${id}`)
           .then(response => response.data);
@@ -28,6 +19,17 @@ export const followedAPI = {
     follow(id){
         return istance.post(`https://social-network.samuraijs.com/api/1.0/follow/${id}`, {})
           .then(response => response.data);
+    },
+    getProfile(userId){
+        return istance.get(`profile/` + userId)
     }
 }
+export const authAPI = {
+    me(){
+        return istance.get(`auth/me`).then(response => response.data);
+    },
+}
+
+
+
 
