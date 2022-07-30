@@ -14,6 +14,7 @@ import Settings from './components/Settings/Settings';
 import FriendsContainer from './components/Friends/FriendsContainer';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import Login from './components/Login/Login';
 
 
 
@@ -31,12 +32,13 @@ const App = (props) => {
           <Route path="profile/*" element={<ProfileContainer store = {props.store}/>} />
           <Route path="dialogs/*" element={<DialogsContainer store = {props.store}/>} />
           <Route path="users/"  element={<UsersContainer/>}/>
+          <Route path="login/"  element={<Login/>}/>
           <Route path="/news" element= {<News/>}/>
           <Route path="/music" element={<Music/>}/>
           <Route path="/settings" element={<Settings/>}/>
       </Routes>
       </div>
-    </div>
+    </div> 
   </BrowserRouter>
   );
 }
