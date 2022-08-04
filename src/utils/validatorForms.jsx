@@ -3,15 +3,15 @@ import * as Yup from "yup";
 
 export const validationSchemaPostForm = Yup.object().shape( {
     newPostText: Yup.string()
-       .min( 1, "Must be longer than 1 characters" )
-       .max( 30, "Must be shorter than 30 characters" )
+       .min( 2, "Must be longer than ${min} characters" )
+       .max( 10, "Must be shorter than ${max} characters" )
        .required( "add text, please" )
  } );
 
 export const validationSchemaMessageForm = Yup.object().shape( {
     newMessageText: Yup.string()
-       .min( 1, "Must be longer than 1 characters" )
-       .max( 50, "Must be shorter than 50 characters" )
+       .min( 1, "Must be longer than ${min} characters" )
+       .max( 50, "Must be shorter than ${max} characters" )
        .required( "add message, please" )
  } );
 
@@ -31,7 +31,7 @@ export const validateLoginForm = values => {
 export const validationSchemaLoginForm = Yup.object().shape( {
  
     password: Yup.string()
-       .min( 2, "Must be longer than 2 characters" )
-       .max( 5, "Must be shorter than 5 characters" )
+       .min( 2, "Must be longer than ${min} characters" )
+       .max( 15, "Must be shorter than ${max} characters" )
        .required( "Required 2" )
  } );
