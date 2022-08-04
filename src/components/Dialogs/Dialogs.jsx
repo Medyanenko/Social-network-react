@@ -2,7 +2,9 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {Formik, Form, Field} from "formik";
+import {Formik, Form, Field, ErrorMessage} from "formik";
+import {validationSchemaMessageForm} from "./../../utils/validatorForms"
+
 
 const Dialogs = (props) => {
   let state = props.dialogsPage;
@@ -35,6 +37,7 @@ const AddMessageForm = (props) => {
         initialValues={{
           newMessageText: ""
         }}
+        validationSchema={validationSchemaMessageForm}
         onSubmit={(values, {resetForm}) => {
            addNewMessage( values.newMessageText );
            resetForm( {values: ''} );
@@ -50,7 +53,7 @@ const AddMessageForm = (props) => {
                     placeholder={'enter text'}
                  />
               </div>
-
+              <ErrorMessage name="newPostText" component="div" />
               <button type={'submit'}>Send2</button>
            </Form>
         )}

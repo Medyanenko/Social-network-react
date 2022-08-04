@@ -4,8 +4,6 @@ import Profile from "./Profile";
 import {connect} from "react-redux/es/exports";
 import {getUserProfile, getStatus, updateStatus} from "../../redux/profileReducer";
 import { useParams } from 'react-router-dom';
-import {Navigate} from 'react-router-dom'
-import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import {compose} from "redux"
 
 export function withRouter(Children){

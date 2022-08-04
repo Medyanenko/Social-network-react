@@ -1,7 +1,8 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
-import {Formik, Form, Field} from "formik";
+import {Formik, Form, Field, ErrorMessage} from "formik";
+import { validationSchemaPostForm } from "../../../utils/validatorForms";
 
 
 const MyPosts = (props) => {
@@ -17,15 +18,18 @@ const MyPosts = (props) => {
     </div>
   );
 };
+
 const AddPostForm = (props) => {
     let addNewPost = (values) => {    
      props.addPost( values );    
   }
+ 
   return (
      <Formik
         initialValues={{
           newPostText: ""
         }}
+        validationSchema={validationSchemaPostForm}
         onSubmit={(values, {resetForm}) => {
           addNewPost( values.newPostText );
            resetForm( {values: ''} );
@@ -41,7 +45,7 @@ const AddPostForm = (props) => {
                     placeholder={'enter text'}
                  />
               </div>
-
+              <ErrorMessage name="newPostText" component="div" />
               <button type={'submit'}>Add Post</button>
            </Form>
         )}
