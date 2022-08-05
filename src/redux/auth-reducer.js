@@ -35,7 +35,7 @@ export const getAuthUserData = () =>{
 }
 }
 
-export const login = (email, password, rememberMe, setStatus) =>{
+export const login = (email, password, rememberMe, setFieldValue) =>{
   return (dispatch) => {
     authAPI.login(email, password, rememberMe)
     .then( data => {         
@@ -43,7 +43,7 @@ export const login = (email, password, rememberMe, setStatus) =>{
         dispatch(getAuthUserData())
       }
       else {
-        setStatus(data.messages[0])
+        setFieldValue("general", data.messages.join(" "))
       }
     });
 }

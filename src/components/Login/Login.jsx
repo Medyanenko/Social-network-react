@@ -21,17 +21,16 @@ const Login = (props) => {
             }}
             validate={validateLoginForm}
             validationSchema={validationSchemaLoginForm}
-            onSubmit={(values, {setStatus}) => {
-               props.login(values.email, values.password, values.rememberMe, setStatus)
+            onSubmit={(values, {setFieldValue}) => {
+               props.login(values.email, values.password, values.rememberMe, setFieldValue)
             }}
          >
-            {({ status }) => (
+            {({ values }) => (
                <Form>
+                  <div >
+                     {values.general ? <span>{values.general}</span>: null}
+                  </div>
                   <div>
-                 {status}
-                 </div>
-                  <div>
-                 
                      <Field
                         name={'email'}
                         type={'text'}
