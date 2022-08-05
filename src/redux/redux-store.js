@@ -5,6 +5,7 @@ import DialogsReducer from "./dialogsReducer";
 import SidebarReducer from "./sidebarReducer";
 import UsersReducer from "./usersReducer";
 import authReducer from "./auth-reducer"
+import appReducer from "./app-reducer";
 import thunkMiddleware from "redux-thunk"
 
 
@@ -14,7 +15,7 @@ let reducer = combineReducers({
     sidebar:SidebarReducer,
     usersPage:UsersReducer,
     auth:authReducer,
-
+    app:appReducer
 });
 
 let store = legacy_createStore(reducer, applyMiddleware(thunkMiddleware));

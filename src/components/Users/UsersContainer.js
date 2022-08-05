@@ -57,5 +57,5 @@ let mapStateToProps = (state) => {
       setCurrentPage,
       toggleFollowingProgress,
       getUsers
-      }), withAuthRedirect
+      }), //withAuthRedirect
   )(UsersContainer)

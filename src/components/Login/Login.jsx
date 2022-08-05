@@ -4,6 +4,7 @@ import { validateLoginForm, validationSchemaLoginForm } from "./../../utils/vali
 import { connect } from 'react-redux/es/exports';
 import {login} from './../../redux/auth-reducer';
 import { Navigate } from 'react-router';
+import s from './Login.module.css'
 
 
 const Login = (props) => {
@@ -28,7 +29,7 @@ const Login = (props) => {
             {({ values }) => (
                <Form>
                   <div >
-                     {values.general ? <span>{values.general}</span>: null}
+                     {values.general ? <span className={s.errors}>{values.general}</span>: null}
                   </div>
                   <div>
                      <Field
@@ -36,7 +37,7 @@ const Login = (props) => {
                         type={'text'}
                         placeholder={'e-mail'} />
                   </div>
-                  <ErrorMessage name="email" component="div" />
+                  <ErrorMessage name="email" component="div" className={s.errors} />
 
                   <div>
                      <Field
@@ -44,7 +45,7 @@ const Login = (props) => {
                         type={'password'}
                         placeholder={'password'} />
                   </div>
-                  <ErrorMessage name="password" component="div" />
+                  <ErrorMessage name="password" component="div" className={s.errors}/>
 
                   <div>
                      <Field
