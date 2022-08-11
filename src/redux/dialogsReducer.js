@@ -49,7 +49,10 @@ const DialogsReducer = (state = initialState, action) => {
       return {
         ...state,
         newMessageText: '',
-        messages: [...state.messages, {id: 6, message: body}]
+          messages: [...state.messages, {
+            id: 6,
+            message: body
+          }]
       };
     default:
       return state;
@@ -57,8 +60,8 @@ const DialogsReducer = (state = initialState, action) => {
 }
 
 export const addMessageActionCreator = (newMessageText) => ({
-  type: ADD_MESSAGE, newMessageText
+  type: ADD_MESSAGE,
+  newMessageText
 });
 
 export default DialogsReducer;
-

@@ -15,20 +15,18 @@ let state = {
     ],
 }
 
-
 test('length of posts should be incremented', () => {
-   let action = addPostActionCreator('aaa')
-   let newState = profileReducer(state, action)
-   expect(newState.posts.length).toBe(3)
+    let action = addPostActionCreator('aaa')
+    let newState = profileReducer(state, action)
+    expect(newState.posts.length).toBe(3)
 
 })
 
-
-  test('message of posts should be correct', () => {
-      let action = addPostActionCreator('aaa')
-      let newState = profileReducer(state, action)
-      expect(newState.posts[2].message).toBe('aaa')
- })
+test('message of posts should be correct', () => {
+    let action = addPostActionCreator('aaa')
+    let newState = profileReducer(state, action)
+    expect(newState.posts[2].message).toBe('aaa')
+})
 
 
 // test('after deleting length of message should be decrement', () => {

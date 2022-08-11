@@ -61,8 +61,7 @@ let store = {
       newMessageText: ""
     },
     sidebar: {
-      friends:
-      [{
+      friends: [{
           id: 1,
           name: "Tanya",
           avatar: "https://vyazanoe-tvorchestvo.ru/wp-content/uploads/2020/07/JSOwXpwrSY0.jpg"
