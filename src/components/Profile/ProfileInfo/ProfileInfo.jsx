@@ -3,23 +3,19 @@ import Preloader from "../../Common/Preloader/Preloader";
 import s from "./ProfileInfo.module.css";
 import ProfileStatusWithHook from "./ProfileStatusWithHook";
 
-const ProfileInfo = (props) => {
-  //debugger;
-  if(!props.profile){
+const ProfileInfo = ({profile, status, updateStatus}) => {
+  if(!profile){
     return <Preloader/>
   }
   return (
     <div >
-      {/* <div>
-        <img src="https://thumbs.dreamstime.com/b/rainbow-love-heart-background-red-wood-60045149.jpg" />
-      </div> */}
       <div className={s.descriptionBlock}>
       <div>
-        <img src={props.profile.photos.small}/>
-        <div>{props.profile.fullName}</div>
-        <div>{props.profile.aboutMe}</div>
-        <div>{props.profile.lookingForAJobDescription}</div>
-        <ProfileStatusWithHook status={props.status} updateStatus={props.updateStatus}/>
+        <img src={profile.photos.small}/>
+        <div>{profile.fullName}</div>
+        <div>{profile.aboutMe}</div>
+        <div>{profile.lookingForAJobDescription}</div>
+        <ProfileStatusWithHook status={status} updateStatus={updateStatus}/>
       </div>
       </div>
     </div>

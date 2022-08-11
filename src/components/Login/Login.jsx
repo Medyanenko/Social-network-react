@@ -7,8 +7,8 @@ import { Navigate } from 'react-router';
 import s from './Login.module.css'
 
 
-const Login = (props) => {
-   if(props.isAuth){
+const Login = ({isAuth, login}) => {
+   if(isAuth){
       return <Navigate to={"/profile"}/>
    }
    return (
@@ -23,7 +23,7 @@ const Login = (props) => {
             validate={validateLoginForm}
             validationSchema={validationSchemaLoginForm}
             onSubmit={(values, {setFieldValue}) => {
-               props.login(values.email, values.password, values.rememberMe, setFieldValue)
+               login(values.email, values.password, values.rememberMe, setFieldValue)
             }}
          >
             {({ values }) => (
