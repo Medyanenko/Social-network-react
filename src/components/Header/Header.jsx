@@ -5,7 +5,7 @@ import s from './Header.module.css';
 const Header = (props) => {
   return (
     <header className={s.header}>
-      <img src="https://www.clipartmax.com/png/full/39-395435_3d-art-logo-design-free-logos-online-logo-design-free-png.png" alt="img-logo"></img>
+      <img src="https://gd-8.com/wp-content/uploads/2015/06/design-1200x480.png" alt="img-logo"></img>
       <div className={s.loginBlock}>
         {props.isAuth 
         ? <div>{props.login} - <button onClick={props.logout}>Log out</button></div>  

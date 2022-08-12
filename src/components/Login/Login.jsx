@@ -13,7 +13,7 @@ const Login = ({isAuth, login}) => {
    }
    return (
       <div>
-         <h2> Login</h2>
+         <h2>Join today</h2>
          <Formik
             initialValues={{
                email: "",
@@ -55,7 +55,7 @@ const Login = ({isAuth, login}) => {
                      <label htmlFor={'rememberMe'}> remember me </label>
                   </div>
 
-                  <button type={'submit'}>Login</button>
+                  <button type={'submit'}>Sign in</button>
                </Form>
             )}
          </Formik>

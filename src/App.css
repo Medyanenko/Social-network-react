@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 .app-wrapper{
   display: grid;
   width: 1200px;
@@ -9,10 +11,14 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
+  font-family: 'Roboto', sans-serif;
+  
+  
 }
 
 .app-wrapper-content{
     grid-area: content;
-    background-color: rgb(211, 250, 242);
+    background-color:white;
+    border-radius: 15px;
 }
 

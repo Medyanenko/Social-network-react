@@ -1,11 +1,11 @@
 .nav {
   grid-area: nav;
-  background-color: #333333e7;
-  padding: 20px;
+  background-color: transparent;
+  padding: 10px 0px 0 35px
 }
 
 .item {
-  color: #fff;
+  color: black;
   text-decoration: none;
   padding: 10px 0;
 }
