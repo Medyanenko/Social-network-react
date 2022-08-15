@@ -11,3 +11,6 @@
 .profileStatus{
     font-style: italic;
 }
+.mainPhoto{
+    max-width: 120px;;
+}
