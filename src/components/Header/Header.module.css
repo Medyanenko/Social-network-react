@@ -1,9 +1,13 @@
 .header{
-    grid-area: header;
-    background-color: transparent;
+  background-color: #000000a3;
+  height: 60px;
+  position: sticky;
+  margin-bottom: 40px;
+  padding: 0px 40px;
+  line-height: 60px;
   }
   .header img{
-    width: 150px;
+    width: 120px;
     padding: 7px 0px;
   }
 .loginBlock{

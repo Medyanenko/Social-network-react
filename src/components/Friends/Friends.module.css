@@ -1,13 +1,18 @@
 .friends{
-
+  grid-area: friends;
+  padding: 10px 0 0 35px;
+}
+.friendsTitle{
+  font-weight: bold;
 }
 .friendsBlock{
- display: flex;
- justify-content: space-between;
- text-align: center;
+  margin: 15px 0 0;
 }
 .friendsBlock img{
   height: 40px;
   width: 40px;
   border-radius: 50%;
+}
+.friendsItem{
+  display: flex;
 }

@@ -9,7 +9,7 @@ const Friends = (props) => {
   ));
   return(
   <div className={s.friends}>
-    <h3>Friends</h3>
+    <div className={s.friendsTitle}>Friends</div>
     <div className={s.friendsBlock}>
       {FriendsElements}
     </div>

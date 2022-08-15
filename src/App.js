@@ -35,10 +35,9 @@ class App extends Component{
     }
     return (
       <HashRouter>
+        <HeaderContainer/>
         <div className='app-wrapper'> 
-          <HeaderContainer/>
           <Navbar/>
-          <FriendsContainer />
           <div className='app-wrapper-content'>
           <Suspense fallback={<div><Preloader /></div>}>
           <Routes>
@@ -53,6 +52,7 @@ class App extends Component{
           </Routes>
           </Suspense>
           </div>
+          <FriendsContainer />
         </div> 
       </HashRouter>
       );

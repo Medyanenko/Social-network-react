@@ -5,7 +5,7 @@ import s from "./../Friends.module.css";
 const FriendsItem = (props) => {
   
     return (
-        <div>
+        <div className={s.friendsItem}>
           <div>
             <img src={props.avatar} />
           </div>
