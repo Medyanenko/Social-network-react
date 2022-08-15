@@ -2,7 +2,8 @@ import React, { Component, Suspense} from 'react';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  HashRouter
 } from "react-router-dom"; 
 import './App.css';
 //import DialogsContainer from './components/Dialogs/DialogsContainer';
@@ -33,7 +34,7 @@ class App extends Component{
       return <Preloader/>
     }
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className='app-wrapper'> 
           <HeaderContainer/>
           <Navbar/>
@@ -53,7 +54,7 @@ class App extends Component{
           </Suspense>
           </div>
         </div> 
-      </BrowserRouter>
+      </HashRouter>
       );
   }
 }
