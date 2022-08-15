@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Medyanenko/Social-network-react/precache-manifest.4a440dba398d717749628c631e11de5a.js"
+  "/Social-network-react/precache-manifest.00e2da3eb55baa4064c9b99bf79d3a95.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Medyanenko/Social-network-react/index.html", {
+workbox.routing.registerNavigationRoute("/Social-network-react/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
