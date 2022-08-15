@@ -1,6 +1,3 @@
-body{
-  background: radial-gradient(#eaee58, #005aff3d);
-}
 .header{
     grid-area: header;
     background-color: transparent;

@@ -10,11 +10,11 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
   return (
     <div >
       <div className={s.descriptionBlock}>
-      <div>
+      <div >
         <img src={profile.photos.small}/>
-        <div>{profile.fullName}</div>
-        <div>{profile.aboutMe}</div>
-        <div>{profile.lookingForAJobDescription}</div>
+        <div className={s.fullName}>{profile.fullName}</div>
+        <div className={s.aboutMe}>{profile.aboutMe}</div>
+        <div className={s.lookingForAJobDescription}>{profile.lookingForAJobDescription}</div>
         <ProfileStatusWithHook status={status} updateStatus={updateStatus}/>
       </div>
       </div>

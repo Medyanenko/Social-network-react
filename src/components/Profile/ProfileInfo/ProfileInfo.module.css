@@ -1,3 +1,13 @@
 .descriptionBlock{
     padding: 10px;
+    min-height: 140px;
+    text-align: center;
+}
+.fullName{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.profileStatus{
+    font-style: italic;
 }
