@@ -1,7 +1,6 @@
 .descriptionBlock{
     padding: 10px;
     min-height: 140px;
-    text-align: center;
 }
 .fullName{
     font-size: 20px;
@@ -13,4 +12,10 @@
 }
 .mainPhoto{
     max-width: 120px;;
+}
+.contact{
+    padding: 0 0 0 10px;
+}
+.errors{
+    color: red;
 }

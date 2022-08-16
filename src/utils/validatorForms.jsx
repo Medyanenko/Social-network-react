@@ -35,3 +35,22 @@ export const validationSchemaLoginForm = Yup.object().shape( {
        .max( 15, "Must be shorter than ${max} characters" )
        .required( "Required 2" )
  } );
+
+ export const validationSchemaProfilForm = Yup.object().shape({
+
+   fullName: Yup.string()
+      .min(2, 'Must be longer than 2 characters !')
+      .max(25, 'Must be shorter than 25 characters !')
+      .required('Required !'),
+
+   lookingForAJobDescription: Yup.string()
+      .min(2, 'Must be longer than 2 characters !')
+      .max(50, 'Must be shorter than 50 characters !')
+      .required('Required !'),
+
+   aboutMe: Yup.string()
+      .min(2, 'Must be longer than 2 characters !')
+      .max(50, 'Must be shorter than 50 characters !')
+      .required('Required !')
+
+})
