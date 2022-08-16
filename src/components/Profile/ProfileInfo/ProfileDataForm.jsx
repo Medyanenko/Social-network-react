@@ -1,26 +1,26 @@
 import React from "react";
-import { Field, Form, Formik,ErrorMessage } from "formik";
+import { Field, Form, Formik, ErrorMessage } from "formik";
 import s from "./ProfileInfo.module.css";
 import { validationSchemaProfilForm } from "./../../../utils/validatorForms"
 
 const ProfileDataForm = ({ profile, handleSubmit, goToEditMode }) => {
   return (
+  
     <Formik
       initialValues={profile}
       validationSchema={validationSchemaProfilForm}
-      onSubmit={(values, bagWithMethods) => {
-        let { setStatus, setSubmitting } = bagWithMethods;
-
-        handleSubmit(values, setStatus, setSubmitting, goToEditMode);
+      onSubmit={(values) => {
+           handleSubmit(values, goToEditMode);
       }}
     >
       {() => (
-        <Form>
-          {
+      
+        <Form>             
+           
             <div>
               <button type={"submit"}>save</button>
             </div>
-          }
+          
 
           <div>
             <Field name={"fullName"} type={"text"} placeholder={"fullName"} />

@@ -51,7 +51,7 @@ export const login = (email, password, rememberMe, setFieldValue) => {
     if (data.resultCode === 0) {
       dispatch(getAuthUserData())
     } else {
-      setFieldValue("general", data.messages.join(" "))
+         setFieldValue("general", data.messages.join(" "))
     }
   }
 }

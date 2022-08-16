@@ -18,8 +18,8 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
       savePhoto(e.target.files[0]);
     }
   };
-  const handleSubmit = (formData, setStatus, setSubmitting, goToViewMode, setFieldValue) => {
-    saveProfile(formData, setStatus, setSubmitting, goToViewMode, setFieldValue);
+  const handleSubmit = (formData, goToViewMode) => {
+    saveProfile(formData, goToViewMode);
     setEditMode(false);
   };
   return (
