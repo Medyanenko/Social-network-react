@@ -7,7 +7,7 @@ import { Navigate } from 'react-router';
 import s from './Login.module.css'
 
 
-const Login = ({isAuth, login}) => {
+const Login = ({isAuth, login, captchaUrl}) => {
    if(isAuth){
       return <Navigate to={"/profile"}/>
    }
@@ -18,7 +18,7 @@ const Login = ({isAuth, login}) => {
             initialValues={{
                email: "",
                password: "",
-               rememberMe: false
+               rememberMe: false,
             }}
             validate={validateLoginForm}
             validationSchema={validationSchemaLoginForm}
@@ -26,11 +26,12 @@ const Login = ({isAuth, login}) => {
                login(values.email, values.password, values.rememberMe, setFieldValue)
             }}
          >
-            {({ values }) => (
+            {(values) => (
                <Form>
                   <div >
                      {values.general ? <span className={s.errors}>{values.general}</span>: null}
                   </div>
+       
                   <div>
                      <Field
                         name={'email'}
@@ -56,6 +57,24 @@ const Login = ({isAuth, login}) => {
                   </div>
 
                   <button type={'submit'}>Sign in</button>
+
+                  <div> {captchaUrl &&
+                           <div>
+
+                              <div>
+                                 <img src={captchaUrl}/>
+                              </div>
+
+                              <div>
+                                 <Field
+                                    name={'captcha'}
+                                    type={'text'}/>
+                              </div>
+
+                           </div>
+
+                        }</div>
+               
                </Form>
             )}
          </Formik>
@@ -63,6 +82,7 @@ const Login = ({isAuth, login}) => {
    )
 }
 const mapStateToProps = (state) => ({
-   isAuth: state.auth.isAuth
+   isAuth: state.auth.isAuth,
+   captchaUrl: state.auth.captchaUrl
 })
 export default connect(mapStateToProps, {login})(Login);
