@@ -19,11 +19,13 @@ const Login = ({isAuth, login, captchaUrl}) => {
                email: "",
                password: "",
                rememberMe: false,
+               general: '',
+               captcha: ''
             }}
             validate={validateLoginForm}
             validationSchema={validationSchemaLoginForm}
             onSubmit={(values, {setFieldValue}) => {
-               login(values.email, values.password, values.rememberMe, setFieldValue)
+               login(values.email, values.password, values.rememberMe, values.captcha, setFieldValue)
             }}
          >
             {(values) => (
