@@ -28,7 +28,7 @@ const Login = ({isAuth, login, captchaUrl}) => {
                login(values.email, values.password, values.rememberMe, values.captcha, setFieldValue)
             }}
          >
-            {(values) => (
+            {({values}) => (
                <Form>
                   <div >
                      {values.general ? <span className={s.errors}>{values.general}</span>: null}

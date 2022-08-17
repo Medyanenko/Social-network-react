@@ -65,11 +65,9 @@ export const login = (email, password, rememberMe, captcha, setFieldValue) => {
     } 
     else{
       if (data.resultCode === 10) {
-        dispatch(getCaptchaUrl())
-       
+        dispatch(getCaptchaUrl())    
       } 
-      setFieldValue("general", data.messages.join(" "))
-      
+      setFieldValue("general", data.messages.join(" "))   
     }
     
   }
