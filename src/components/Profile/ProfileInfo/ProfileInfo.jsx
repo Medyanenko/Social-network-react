@@ -29,6 +29,7 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
           <img
             src={profile.photos.large || userPhoto}
             className={s.mainPhoto}
+            alt="main foto"
           />
           {isOwner && <input type={"file"} onChange={onMainPhotoSelected} />}
           {editMode ? (

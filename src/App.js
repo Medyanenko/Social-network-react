@@ -1,6 +1,5 @@
 import React, { Component, Suspense} from 'react';
 import {
-  BrowserRouter,
   Routes,
   Route,
   HashRouter

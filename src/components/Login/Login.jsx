@@ -64,7 +64,7 @@ const Login = ({isAuth, login, captchaUrl}) => {
                            <div>
 
                               <div>
-                                 <img src={captchaUrl}/>
+                                 <img src={captchaUrl} alt="captcha"/>
                               </div>
 
                               <div>

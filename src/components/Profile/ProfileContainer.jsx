@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import Profile from "./Profile";
 import { connect } from "react-redux/es/exports";
@@ -7,7 +6,7 @@ import {
   getStatus,
   updateStatus,
   savePhoto,
-  saveProfile
+  saveProfile,
 } from "../../redux/profileReducer";
 import { useParams } from "react-router-dom";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
@@ -33,7 +32,7 @@ class ProfileContainer extends React.Component {
     this.refreshProfile();
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if(this.props.match.params.userId !== prevProps.match.params.userId){
+    if (this.props.match.params.userId !== prevProps.match.params.userId) {
       this.refreshProfile();
     }
   }
@@ -62,7 +61,13 @@ let mapStateToProps = (state) => ({
 });
 
 export default compose(
-  connect(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto, saveProfile}),
+  connect(mapStateToProps, {
+    getUserProfile,
+    getStatus,
+    updateStatus,
+    savePhoto,
+    saveProfile,
+  }),
   withRouter,
   withAuthRedirect
 )(ProfileContainer);
