@@ -2,7 +2,7 @@
 import { applyMiddleware, combineReducers, legacy_createStore, compose} from "redux";
 import ProfileReducer from "./profileReducer";
 import DialogsReducer from "./dialogsReducer";
-import SidebarReducer from "./sidebarReducer";
+import SidebarReducer from "./FriendsReducer";
 import UsersReducer from "./usersReducer";
 import authReducer from "./auth-reducer"
 import appReducer from "./app-reducer";
@@ -12,7 +12,7 @@ import thunkMiddleware from "redux-thunk"
 let reducer = combineReducers({
     profilePage:ProfileReducer,
     dialogsPage:DialogsReducer,
-    sidebar:SidebarReducer,
+    friendsBlock:SidebarReducer,
     usersPage:UsersReducer,
     auth:authReducer,
     app:appReducer
