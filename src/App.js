@@ -11,7 +11,7 @@ import UsersContainer from "./components/Users/UsersContainer";
 import NotFound from "./components/Common/NotFound/NotFound";
 import Login from "./components/Login/Login";
 import { connect } from "react-redux";
-import { initializeApp } from "./redux/app-reducer.js";
+import { initializeApp } from "./redux/app-reducer.ts";
 import Preloader from "./components/Common/Preloader/Preloader";
 import { Navigate } from "react-router-dom";
 
